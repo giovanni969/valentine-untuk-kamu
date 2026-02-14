@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Untuk Kamu 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- AUDIO (tanpa controls) -->
+    <audio id="bgMusic" loop>
+        <source src="lagu.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Tombol Musik -->
+    <button class="music-btn" onclick="toggleMusic()" id="musicBtn">
+        🎵 Putar Musik
+    </button>
+
+    <!-- Halaman Unlock -->
+    <div class="lock-screen" id="lockScreen">
+        <h2>Masukkan Kata Rahasia 💌</h2>
+        <input type="password" id="password" placeholder="Kata rahasia...">
+        <button onclick="checkPassword()">Masuk</button>
+        <p id="errorText"></p>
+    </div>
+
+    <!-- Konten Utama -->
+    <div class="main-content hidden" id="mainContent">
+        <h1>Selamat Hari Valentine 💕</h1>
+        <p>Kamu adalah alasan aku tersenyum setiap hari.</p>
+
+        <button onclick="showLetter()">Buka Surat Rahasia 💌</button>
+
+        <div class="letter hidden" id="letter">
+            <p id="typingText"></p>
+        </div>
+
+        <div class="game">
+            <h3>Kamu sayang aku nggak? 😆</h3>
+            <button onclick="loveAnswer()">Iya banget 😘</button>
+            <button id="noBtn">Enggak 😈</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
